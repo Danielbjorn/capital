@@ -1,0 +1,34 @@
+
+
+
+<div class ="Book-show">
+
+	<div class ="Book-show-info">
+		
+		<strong>Name:</strong> <%= @book.Name %> <br>
+
+		 <strong>Author:</strong> <%= @book.Author %> <br>
+
+		 <strong>Rating:</strong> <%= @book.Rating %> <br>
+		  
+		 <strong>Comment:</strong> <%= @book.Comment %> <br>
+
+	</div>
+
+
+	<div class ="Book-show-buttons">
+
+		<%= link_to 'Edit', edit_book_path(@book), class:"btn btn-dark" %>
+
+    	<%= link_to 'Back', books_path, class:"btn btn-dark" %>
+
+	</div>
+    
+
+  
+</div>
+
+
+
+
+
