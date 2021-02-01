@@ -1,30 +1,45 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  #before_action :correct_user, only: [:edit, :update, :destroy]
 
-  # GET /books
-  # GET /books.json
+
+  #def correct_user # DANIEL ADDED THIS CONTROLLER METHOD -- This associatios user with 'current id (user)'.. -------
+   # @book = current_user.books.find_by(id: params[:id])
+    #redirect_to books_path, notice: "Not Authorized To Edit This Book" if @friend.nil?
+  #end
+
+  # ---------------------------------
+
+
   def index
     @books = Book.all
   end
 
-  # GET /books/1
-  # GET /books/1.json
+  # ---------------------------------
+
   def show
   end
 
-  # GET /books/new
+  # ---------------------------------
+
   def new
-    @book = Book.new
+    @book = Book.new  
+    #book = current_user.books.build
   end
 
-  # GET /books/1/edit
+  # ---------------------------------
+
+
   def edit
   end
 
-  # POST /books
-  # POST /books.json
+ # ---------------------------------
+
+
   def create
-    @book = Book.new(book_params)
+    @book = Book.new(book_params)  
+    #@book = current_user.books.build(book_params)                 # this is new code
 
     respond_to do |format|
       if @book.save
@@ -37,8 +52,9 @@ class BooksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /books/1
-  # PATCH/PUT /books/1.json
+  # ---------------------------------
+
+ 
   def update
     respond_to do |format|
       if @book.update(book_params)
@@ -51,8 +67,9 @@ class BooksController < ApplicationController
     end
   end
 
-  # DELETE /books/1
-  # DELETE /books/1.json
+  # ---------------------------------
+
+ 
   def destroy
     @book.destroy
     respond_to do |format|
@@ -60,6 +77,10 @@ class BooksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  
+
+  # ---------------------------------
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +90,6 @@ class BooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_params
-      params.require(:book).permit(:Name, :Author, :Rating, :Comment, :user_id)
+      params.require(:book).permit(:Name, :Author, :Rating, :Comment, :user_id, :image)
     end
 end

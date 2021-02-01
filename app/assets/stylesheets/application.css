@@ -1,62 +1,93 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-html, body {
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #2d3436;
+	background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+	margin-bottom: 50px;
+}
+
+.container {
 	margin: 0px;
-	height: 100%;
-
-nav.navbar {
-	height: 50px;
+	padding: 0px;
 }
 
-h1 {
-	font-size: 20px;
-	padding-top: 50px;
-	
-}	
+ 
 
+/* THIS HERE IS TOP LEVEL NAV BAR*/
 
-.Book-show-info {
-	font-size: 9px;
-}
-
-.Book-show-buttons {
-	font-size: 14px;
-}
-
-.form-control {
-	padding: 5px;
-	margin-top: 5px;
+.nav-link {
 	font-size: 12px;
 }
 
-/*.Front-page {
-	background-image: url("test1.png");
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 1440px;
+.navbar-brand {
 
-}*/
-
-.Front-page {
-  margin: 0px;
-  height: 100%;
-  background-color: red;
+	margin-left: 700px;
+	font-size: 16px;
 }
 
-div.Sign-in {
+/*------------------------------------------*/
 
-	padding: 1000px;
+
+
+/*AÐAAAL -------------------------------------------------------------------*/
+
+.New-Book-Button {
+	margin-left: 15%;
+
 }
+
+.show-image { 
+
+	margin-top: 1%;
+	margin-left: 15%;
+	width: 12%;
+	height: 12%;
+	margin-bottom: 0;
+}
+
+.show-image-btn{
+	margin-top: -4%;
+	margin-left: 15%;
+	width: 12%;
+}
+
+#book-main-info {
+	margin-left: 55%;
+}
+
+
+
+.form-group {
+	margin-left: 5%;
+}
+
+
+.sign-out {
+	margin-left: 900px;
+}
+
+.btn-dark {
+	background-opacity: 0.5;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+
+.edit-profile-buttons {
+
+	margin-left: 5%;
+}
+
+.edit-form {
+	width: 25%;
+}
+
+.edit-user {
+	margin-left: 100px;
+}
+
+

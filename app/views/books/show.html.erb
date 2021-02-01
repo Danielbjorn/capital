@@ -1,19 +1,25 @@
 
 
 
-<div class ="Book-show">
+<div class="show-image-container">
 
-	<div class ="Book-show-info">
+	<div id = "">	
+		<%= image_tag(@book.image, class: "show-image") %> <br>
+	</div>
+
+	<div class = "show-container">
 		
 		<strong>Name:</strong> <%= @book.Name %> <br>
 
 		 <strong>Author:</strong> <%= @book.Author %> <br>
 
-		 <strong>Rating:</strong> <%= @book.Rating %> <br>
+		 <strong>Rating:</strong> <%= @book.Rating  %> <br>
 		  
 		 <strong>Comment:</strong> <%= @book.Comment %> <br>
 
 	</div>
+
+
 
 
 	<div class ="Book-show-buttons">

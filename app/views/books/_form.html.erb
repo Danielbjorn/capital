@@ -12,7 +12,7 @@
   <% end %>
 
 
-
+  <br><br>
   <div class="form-group">
     <%= form.text_field :Name, class: "form-control", placeholder: "Name of the book" %>
   </div>
@@ -32,6 +32,14 @@
    <div class="form-group">
     <%= form.number_field :user_id, id: :book_user_id, class: "form-control", value: current_user.id, type: :hidden %> <!-- IMPORTANT CODE FOR USER ID -->
   </div>
+
+  <br><br>
+
+  <div class = "field form-group">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+  
 
   <br>
 
