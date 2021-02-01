@@ -10,84 +10,99 @@ body {
 	margin-bottom: 50px;
 }
 
-.container {
-	margin: 0px;
-	padding: 0px;
-}
-
+/*.container {
+	margin: 0;
+	padding: 0;
+}*/
  
 
 /* THIS HERE IS TOP LEVEL NAV BAR*/
 
 .nav-link {
+
+	display: inline-blocks;	
+	text-align: center;
 	font-size: 12px;
 }
 
 .navbar-brand {
 
-	margin-left: 700px;
 	font-size: 16px;
+	text-align: center;
+	justify-content: center;
 }
+
 
 /*------------------------------------------*/
 
+.Sign-In-Container {
+
+	margin-left: 10%;
+	margin-top: 2%;
+}
+
+.Sign-Up-Container {
+
+	margin-left: 10%;
+	margin-top: 2%;
+}
 
 
-/*AÐAAAL -------------------------------------------------------------------*/
+#user_email, #user_password, #user_password_confirmation, #user_current_password {
 
-.New-Book-Button {
-	margin-left: 15%;
+	width: 500px;
+}
+
+.Sign-Up-btn {
+
+	margin-top: 20px;
 
 }
 
-.show-image { 
+.Edit-Profile-Container {
+	margin-left: 10%;
+	margin-top: 2%;
 
-	margin-top: 1%;
-	margin-left: 15%;
-	width: 12%;
-	height: 12%;
-	margin-bottom: 0;
+}
+/*AÐAAAL -------------------------------------------------------------------*/
+
+#New-Book-btn {
+
+	display: flex;
+	justify-content: center;
+}
+
+
+img {
+
+	width: 10%;
+	height: 10%;
+	padding: 1%;
+
 }
 
 .show-image-btn{
-	margin-top: -4%;
+	margin-top: 0%;
 	margin-left: 15%;
 	width: 12%;
 }
 
-#book-main-info {
-	margin-left: 55%;
+
+.show-text-container {
+	margin-left: 1%;
+	color: white;
+}
+
+.Book-show-buttons {
+	margin-top: 1%;
+	margin-left: 1%;
 }
 
 
-
-.form-group {
-	margin-left: 5%;
-}
-
-
-.sign-out {
-	margin-left: 900px;
-}
-
-.btn-dark {
-	background-opacity: 0.5;
-}
 
 /*----------------------------------------------------------------------------------*/
 
 
-.edit-profile-buttons {
 
-	margin-left: 5%;
-}
-
-.edit-form {
-	width: 25%;
-}
-
-.edit-user {
-	margin-left: 100px;
-}
 
 
