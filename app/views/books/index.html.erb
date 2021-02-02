@@ -3,42 +3,38 @@
 
 
 
-<!-- <div class = "book-background"> -->
+<div class = "book-background">
 
 <br>
-
-
-<%= link_to 'New Book', new_book_path, class:"btn btn-dark", id: "New-Book-btn" %>
+<%= link_to 'New Book', new_book_path, class:"btn btn-dark New-Book-Button" %>
 
 
   
-  
-  <div class = "show-image">
-    
-  
+
+
+  <div class="Main-book-container">
+
     <% @books.each do |book| %>
 
-      <%= link_to image_tag(book.image), book, id: "coolimage" %>
-   
-     <!--  <%= book.Name %>
-      <%= book.user_id %> -->
-
-     <% end %> 
-
-  </div>
+    <div class="card-image">
+      <%= image_tag book.image, class: "show-image" %>
+      <%= book.Name %>
+      <%= book.user_id %>
       
-
+    <div>
 
     
+    <%= link_to '', book, class:"btn btn-dark show-image-btn" %>
     
-<!-- </div>
-   -->
+  </div>
+  <% end %>
 
 
 
     
   
 
+</div>
 
 
   

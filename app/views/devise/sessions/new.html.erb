@@ -1,8 +1,5 @@
 
 
-<div class ="Sign-In-Container">
-  
-
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -20,8 +17,7 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
- 
- <br>
+
   <div class="actions">
     <%= f.submit "Log in", class: "btn btn-dark" %>
   </div>
@@ -32,6 +28,6 @@
 <%= render "devise/shared/links" %>
   
 
-</div>
+
 
 

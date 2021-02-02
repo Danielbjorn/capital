@@ -3,11 +3,11 @@
 
 <div class="show-image-container">
 
-
+	<div id = "">	
 		<%= image_tag(@book.image, class: "show-image") %> <br>
+	</div>
 
-
-	<div class = "show-text-container">
+	<div class = "show-container">
 		
 		<strong>Name:</strong> <%= @book.Name %> <br>
 
@@ -21,7 +21,7 @@
 
 
 
-	
+
 	<div class ="Book-show-buttons">
 
 		<%= link_to 'Edit', edit_book_path(@book), class:"btn btn-dark" %>
